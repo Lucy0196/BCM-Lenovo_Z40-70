@@ -1,6 +1,6 @@
-Cara Mengatasi Masalah Bluetooth pada BroadCom Lenovo
 hapus file BCM.hcd pada /lib/firmware/brcm/
 
-lalu copy file BCM43142A0-105b-e065.hcd ke /lib/firmware/brcm/
+copy file BCM43142A0-105b-e065.hcd ke /lib/firmware/brcm/
+rename BCM43142A0-105b-e065.hcd tadi dengan nama BCM.hcd
 
-Restart
+lalu restart
