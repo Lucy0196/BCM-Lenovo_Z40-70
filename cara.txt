@@ -1,6 +1,31 @@
-hapus file BCM.hcd pada /lib/firmware/brcm/
+# Fix bluetooth ubuntu 16.04.1 pada Lenovo 40-70
 
-copy file BCM43142A0-105b-e065.hcd ke /lib/firmware/brcm/
-rename BCM43142A0-105b-e065.hcd tadi dengan nama BCM.hcd
+# Download file BCM43142A0-105b-e065.hcd
 
-lalu restart
+# Copy file tersebut kedalam direktori /lib/firmware/brcm/
+# "cp BCM43142A0-105b-e065.hcd /lib/firmware/brcm/"
+# Masuk ke direktori tadi
+# "cd /lib/firmware/brcm"
+# "ls -ls"
+# Perhatikan apakah ada file dengan nama BCM.hcd
+# jika ada maka hapus file tersebut
+# "rm BCM.hcd"
+# Kemudian rubah nama file BCM43142A0-105b-e065.hcd menjadi BCM.hcd
+# "mv BCM43142A0-105b-e065.hcd BCM.hcd"
+
+# Kettikkan perintah berikut :
+# "sudo modprobe -r btusb"
+# "sudo modprobe btusb"
+
+# Hal terkhir yang akan dilakukan adalah membuat perintah tersebut autolad pada saat booting dengan cara :
+
+# "sudo gedit /etc/rc.local"
+# Tambahkan
+# "sudo modprobe -r btusb"
+# "sudo modprobe btusb"
+# lalu simpan dan restart Ubuntu anda.
+
+
+############## K E T E R A N G A N ###################
+
+# SETIAP PERINTAH HARUS DI HAPUS TANGAN " " DAN #
